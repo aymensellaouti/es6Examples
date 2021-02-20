@@ -22,11 +22,15 @@ class Personne {
 }
 
 class Admin extends Personne {
+  #privateValue;
   constructor(nom, age, email, password) {
     super(nom, age);
     this._email = email;
     this.password = password;
+    this.#privateValue = 20;
+    Admin.status++;
   }
+  static status = 1;
   get email() {
     return `L'email est : ${this._email}`;
   }
@@ -40,7 +44,7 @@ class Admin extends Personne {
   }
 
   static whoIAm() {
-      console.log('I am an admin');
+    console.log("I am an admin");
   }
   log() {
     super.log();
@@ -49,8 +53,6 @@ class Admin extends Personne {
   }
 }
 
-/* const aymen = new Personne("aymen", 38);
- */
 const admin = new Admin(
   "aymen sellaouti",
   38,
@@ -61,3 +63,5 @@ admin.log();
 admin.email = "newEmail";
 admin.log();
 Admin.whoIAm();
+console.log(Admin.status);
+console.log(admin.#privateValue);
