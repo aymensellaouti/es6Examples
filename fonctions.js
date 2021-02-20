@@ -17,9 +17,9 @@ p => { /* Instructions */ };
 
 const saySomething = message => { console.log(message); };
 
-Si la fonction n’a pas de paramètre, on utilise les parenthèses vides :
+//Si la fonction n’a pas de paramètre, on utilise les parenthèses vides :
 () => { /* Instructions */ };
-Si l’instruction de la fonction retourne une expression, on écrit :
+//Si l’instruction de la fonction retourne une expression, on écrit :
 (p1, …, pN) => { return expression };
-La syntaxe peut être encore réduite à :
+//La syntaxe peut être encore réduite à :
 (p1, …, pN) => expression;

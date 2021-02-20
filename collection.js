@@ -1,0 +1,10 @@
+const maCollection = new Set();
+console.log('Taille initiale de ma collection',maCollection.size);
+maCollection.add('aymen');
+maCollection.add(38);
+console.log('Taille de ma collection',maCollection.size);
+maCollection.add(38);
+console.log('Taille de ma collection',maCollection.size);
+maCollection.delete(38);
+console.log('Taille de ma collection',maCollection.size);
+console.log('est ce que maCollection a la valeur 38', maCollection.has(38));
