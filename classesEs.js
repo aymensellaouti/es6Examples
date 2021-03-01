@@ -10,6 +10,7 @@ function creerPersonne(nom, age) {
 var aymenSellaouti = new creerPersonne("Aymen Sellaouti", 38);
 
 class Personne {
+  firstname = "aymen";
   constructor(nom, age) {
     // propriétés
     this.nom = nom;
@@ -17,17 +18,15 @@ class Personne {
   }
 
   log() {
-    console.log(`${this.nom} a ${this.age} ans`);
+    console.log(`${this.nom} ${this.firstname} a ${this.age} ans`);
   }
 }
 
 class Admin extends Personne {
-  #privateValue;
   constructor(nom, age, email, password) {
     super(nom, age);
     this._email = email;
     this.password = password;
-    this.#privateValue = 20;
     Admin.status++;
   }
   static status = 1;
@@ -54,7 +53,7 @@ class Admin extends Personne {
 }
 
 const admin = new Admin(
-  "aymen sellaouti",
+  "sellaouti",
   38,
   "aymen.sellaouti@gmail.com",
   "123456"
@@ -64,4 +63,3 @@ admin.email = "newEmail";
 admin.log();
 Admin.whoIAm();
 console.log(Admin.status);
-console.log(admin.#privateValue);
